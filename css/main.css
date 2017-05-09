@@ -4,3 +4,27 @@
 .titulo2{
 	color: blue;
 }
+.tittle{
+	color: lightskyblue ;
+}
+
+.banner{
+	height: 200px;
+}
+
+.banner-small{
+	height: 100px; 
+}
+
+.fecha{
+	font-size: small;
+	color: darkgray;
+	float: left;
+}
+.footer{
+	font-size: 15px;
+	color: darkgray ;
+}
+.center{
+	text-align: center ;
+}

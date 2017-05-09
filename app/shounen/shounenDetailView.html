@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="pull-left fecha">
+    	{{vm.shounenItem.fechaPublicacion | date: "EEEE ,MMMM d, y" }}
+    </div>
+    <div id="sohunenBody">
+    	<h1> {{vm.shounenItem.tituloShounen}} </h1>
+    	<img src=" {{vm.shounenItem.banner}} " style="height: 300px">
+    	<p> {{vm.shounenItem.descripcionShounen}} </p>
+    	<h4>Tags relacionados:</h4>
+    	<p> {{vm.shounenItem.tagList}} </p>
+    </div>
+</div>

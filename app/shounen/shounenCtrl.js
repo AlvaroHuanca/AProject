@@ -1,10 +1,24 @@
-(function(){
-	"use strict";
-	angular.module("shounenApp")
-		.controller("ShounenCtrl", ShounenCtrl );
+(function() {
+    "use strict";
+    angular.module("shounenApp")
+        .controller("ShounenCtrl", ["shounenResource", ShounenCtrl]);
 
-	function ShounenCtrl($scope) {
+    function ShounenCtrl(shounenResource) {
 
-		$scope.mensaje = "hola Visitante";
-	}
+        var me = this;
+
+        shounenResource.query(function(data) {
+            me.shounen = data;
+        });
+
+        me.onCategoryClick = function(category) {
+            if (category) {
+
+                me.filterCategory = category;
+            } else {
+                me.filterCategory = "";
+            }
+        };
+
+    }
 }());
